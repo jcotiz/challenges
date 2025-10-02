@@ -17,8 +17,7 @@ from collections import Counter
 
 s = "dsahjpjauf"
 words = ["ahjpjau", "ja","ahjpjjau" , "ahbwzgqnuk", "tnmlanowax"]
-split_s = list(s)
-words_repeat= Counter(split_s)
+words_repeat= Counter(list(s))
 
 
 for word in words:
@@ -40,24 +39,4 @@ for word in words:
         else:
             print("Incorrect")
     else:
-        print("⚠️ Palabra contiene letras fuera de 's':", word)
-
-
-"""
-repeat = {
-    "a": 2, <= 
-    "b": 1,
-    "c": 1,
-    "d": 1,
-    "e": 1
-}
-"""
-
-"""step : check letra in string , step 2:   """
-
-
-"""
-test = "abcdee"
-repeats = {c: count for letter,}
-
-"""
+        print(" Palabra contiene letras fuera de 's':", word)
