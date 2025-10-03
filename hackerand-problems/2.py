@@ -38,8 +38,6 @@ There are  distinct words. Here, "bcdef" appears twice in the input at the first
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-
 n = int(input().strip())
 words = []
 repeats = 1
@@ -60,3 +58,15 @@ for i in range(n):
 print(len(words))
 g = " ".join(map(str, repeats_letters.values()))
 print(g)
+
+"""optimized below.."""
+
+n = int(input().strip())
+word_count = {}
+
+for _ in range(n):
+    word = input().strip()
+    word_count[word] = word_count.get(word, 0) + 1
+
+print(len(word_count))
+print(" ".join(map(str, word_count.values())))
