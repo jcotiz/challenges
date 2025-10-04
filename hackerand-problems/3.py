@@ -35,20 +35,18 @@ Also, note the single space within each compression and between the compressions
 from itertools import groupby
 
 n = input().strip()
-numbers = []
-index = -1
+a_of_repeats = []
 r = 0
 text = []
 
 for number, repeats in groupby(n):
-    numbers = []
-    numbers.append(list(repeats))
+    a_of_repeats = []
+    a_of_repeats.append(list(repeats))
     #print(numbers)
-    lens = int(len(numbers[0]))
+    lens = int(len(a_of_repeats[0]))
     r = 0
     #print(lens)
     for a in range(lens):
-        index += 1
         r += 1
     text.append(f"({r}, {number})")
 print(" ".join(map(str, text)))
